@@ -8,7 +8,11 @@ const cols = 10;
 const cells = rows * cols;
 
 //? FUNZIONI
-
+/**
+ * Funzione che crea delle celle da aggiungere successivamente in una grid
+ * @param {number} content index del ciclo for
+ * @returns {node} restituisce un div (cella)
+ */
 const createCell = (content) => {
 
     // Creo una cella
@@ -24,6 +28,7 @@ form.addEventListener('submit', function (e) {
     //! Impedisco che venga ricaricata la pagina
     e.preventDefault();
 
+
     for (let i = 1; i <= cells; i++) {
 
         // Invoco la funzione che crea la cella
@@ -32,10 +37,12 @@ form.addEventListener('submit', function (e) {
         //! La cella cambia colore quando viene cliccata
         cell.addEventListener('click', function () {
             cell.classList.toggle('clicked');
+            console.log(i);
         })
 
         // Inserisco la cella nella grid
         grid.appendChild(cell);
     }
+
 
 })
