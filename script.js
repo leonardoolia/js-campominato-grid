@@ -18,3 +18,24 @@ const createCell = (content) => {
     return newCell;
 }
 
+//? CREO EVENT LISTENER
+
+form.addEventListener('submit', function (e) {
+    //! Impedisco che venga ricaricata la pagina
+    e.preventDefault();
+
+    for (let i = 1; i <= cells; i++) {
+
+        // Invoco la funzione che crea la cella
+        const cell = createCell(i);
+
+        //! La cella cambia colore quando viene cliccata
+        cell.addEventListener('click', function () {
+            cell.classList.toggle('clicked');
+        })
+
+        // Inserisco la cella nella grid
+        grid.appendChild(cell);
+    }
+
+})
