@@ -32,15 +32,20 @@ footer {
     height: 500px;
     width: 500px;
     margin: 0 auto;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .cell {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cell.clicked {
