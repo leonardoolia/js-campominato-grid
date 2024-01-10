@@ -1,0 +1,47 @@
+/*? LAYOUT DELLA PAGINA */
+main {
+    background-color: aquamarine;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    min-height: 100px;
+}
+
+footer {
+    min-height: 50px;
+}
+
+#button {
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+}
+
+.form-label {
+    position: relative;
+    top: 4px
+}
+
+
+/*? LAYOUT DELLA GRIGLIA */
+
+#grid {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+}
+
+.cell.clicked {
+    background-color: blue;
+}
