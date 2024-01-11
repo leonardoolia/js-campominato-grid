@@ -28,6 +28,8 @@ form.addEventListener('submit', function (e) {
     //! Impedisco che venga ricaricata la pagina
     e.preventDefault();
 
+    //! Rimuovo griglia precedente quando viene cliccato nuovamente il bottone
+    grid.innerHTML = '';
 
     for (let i = 1; i <= cells; i++) {
 
